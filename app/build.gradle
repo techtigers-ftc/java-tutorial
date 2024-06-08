@@ -4,10 +4,13 @@
  * This generated file contains a sample Java application project to get you started.
  * For more details on building Java & JVM projects, please refer to https://docs.gradle.org/8.8/userguide/building_java_projects.html in the Gradle documentation.
  */
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'com.adarshr.test-logger' version '4.0.0'
 }
 
 repositories {
@@ -16,10 +19,14 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
+    // // Use JUnit Jupiter for testing.
     testImplementation libs.junit.jupiter
 
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.mockito:mockito-core:3.+'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.10.2'
+
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     // This dependency is used by the application.
     implementation libs.guava
@@ -40,4 +47,24 @@ application {
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+testlogger {
+    theme 'mocha'
+    // showExceptions true
+    // showStackTraces true
+    // showFullStackTraces false
+    // showCauses true
+    // slowThreshold 2000
+    // showSummary true
+    // showSimpleNames false
+    // showPassed true
+    // showSkipped true
+    // showFailed true
+    // showOnlySlow false
+    // showStandardStreams false
+    // showPassedStandardStreams true
+    // showSkippedStandardStreams true
+    // showFailedStandardStreams true
+    logLevel 'lifecycle'
 }
