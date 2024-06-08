@@ -8,6 +8,10 @@ public class App {
         return "Hello World!";
     }
 
+    public boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
     }

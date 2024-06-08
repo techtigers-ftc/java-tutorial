@@ -4,11 +4,56 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.ParameterizedTest;
+import static org.mockito.Mockito.*;
+
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Nested
+    @DisplayName("getGreeting()")
+    class GetGreeting {
+        @Test
+        @DisplayName("should return a greeting message")
+        void shouldReturnGreeting() {
+            App classUnderTest = new App();
+            assertEquals("Hello World!", classUnderTest.getGreeting(), "app should return a greeting");
+        }
+    }
+
+    @Nested
+    @DisplayName("isEven()")
+    class IsEven {
+        @DisplayName("[Check for even numbered inputs]")
+        @ValueSource(ints = {2, 4, 6, 8, 10})
+        @ParameterizedTest(name = "should return true for even numbers (value={0})")
+        void shouldReturnTrueForEvenNumbers(int number) {
+            App classUnderTest = new App();
+            assertTrue(classUnderTest.isEven(number));
+        }
+
+        @DisplayName("[Check for odd numbered inputs]")
+        @ValueSource(ints = {1, 3, 5, 7, 9})
+        @ParameterizedTest(name = "should return true for even numbers (value={0})")
+        void shouldReturnFalseForOddNumbers() {
+            App classUnderTest = new App();
+            assertFalse(classUnderTest.isEven(1));
+        }
+    }
+
+    @Nested
+    @DisplayName("[Mocking]")
+    class Mocks {
+        @Test
+        @DisplayName("should return a greeting message")
+        void shouldReturnGreeting() {
+            App classUnderTest = new App();
+            App mockApp = mock(App.class);
+            when(mockApp.getGreeting()).thenReturn("Mockity mock!");
+            assertEquals("Mockity mock!", mockApp.getGreeting());
+        }
     }
 }
