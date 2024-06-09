@@ -41,7 +41,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'org.example.App'
+    mainClass = 'team.techtigers.tutorials.App'
 }
 
 tasks.named('test') {
@@ -51,20 +51,4 @@ tasks.named('test') {
 
 testlogger {
     theme 'mocha'
-    // showExceptions true
-    // showStackTraces true
-    // showFullStackTraces false
-    // showCauses true
-    // slowThreshold 2000
-    // showSummary true
-    // showSimpleNames false
-    // showPassed true
-    // showSkipped true
-    // showFailed true
-    // showOnlySlow false
-    // showStandardStreams false
-    // showPassedStandardStreams true
-    // showSkippedStandardStreams true
-    // showFailedStandardStreams true
-    logLevel 'lifecycle'
 }
