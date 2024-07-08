@@ -2,7 +2,11 @@
 .gradle
 
 # Ignore Gradle build output directory
-build
+build/
 
 # Ignore IntelliJ project-specific files
 local.properties
+.idea/
+
+# Mac OS files
+.DS_Store
