@@ -4,13 +4,9 @@
  * This generated file contains a sample Java application project to get you started.
  * For more details on building Java & JVM projects, please refer to https://docs.gradle.org/8.8/userguide/building_java_projects.html in the Gradle documentation.
  */
-import org.gradle.api.tasks.testing.logging.TestExceptionFormat
-import org.gradle.api.tasks.testing.logging.TestLogEvent
-
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    id 'application'
-    id 'com.adarshr.test-logger' version '4.0.0'
+    alias(libs.plugins.java.application)
+    alias(libs.plugins.testlogger)
 }
 
 repositories {
@@ -19,17 +15,9 @@ repositories {
 }
 
 dependencies {
-    // // Use JUnit Jupiter for testing.
     testImplementation libs.junit.jupiter
-
-    testImplementation 'org.mockito:mockito-core:3.+'
-	testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.10.2'
-
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
-    // This dependency is used by the application.
-    implementation libs.guava
+    testImplementation libs.junit.jupiter.params
+    testImplementation libs.mockito.core
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -44,11 +32,14 @@ application {
     mainClass = 'team.techtigers.tutorials.App'
 }
 
-tasks.named('test') {
+tasks.withType(Test).configureEach {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
-}
 
-testlogger {
-    theme 'mocha'
+    testlogger {
+        theme 'mocha'
+        showStackTraces false
+        showExceptions false
+        showCauses false
+    }
 }
