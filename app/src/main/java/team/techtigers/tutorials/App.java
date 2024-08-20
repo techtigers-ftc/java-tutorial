@@ -5,6 +5,26 @@ package team.techtigers.tutorials;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
+        CarFleet fleet = new CarFleet();
+
+        System.out.println("==================================");
+        System.out.println("Initial state of the fleet\n--->");
+        fleet.show();
+
+        System.out.println("Rent the Mazda from the fleet\n--->");
+        fleet.rentCar("Mazda", "CX-5");
+        fleet.show();
+
+        System.out.println("Drive the Mazda for a 100 miles\n--->");
+        fleet.driveCar("Mazda", "CX-5", 100);
+        fleet.show();
+
+        System.out.println("Return the Mazda to the fleet\n--->");
+        fleet.returnCar("Mazda", "CX-5");
+        fleet.show();
+
+        System.out.println("Refuel the Mazda\n--->");
+        fleet.refuelCar("Mazda", "CX-5");
+        fleet.show();
     }
 }
