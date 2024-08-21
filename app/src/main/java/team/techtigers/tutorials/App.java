@@ -5,6 +5,9 @@ package team.techtigers.tutorials;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
+        Car car = new Car();
+        car.show();
+        car.rentCar("Honda", "Corolla");
+
     }
 }
