@@ -24,6 +24,32 @@ public class App {
      * @param args Arguments passed to the entry point from the command line.
      */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // This variable is available to all scopes in this method.
+        System.out.println("---\n");
+        System.out.println("[Outer scope]");
+
+        int outerScope = 5;
+        System.out.println("- Outer scope value     : " + outerScope);
+        {
+            System.out.println("  [Inner scope]");
+
+            // This variable is available only in this inner scope and any
+            // inner scopes defined within this scope.
+            int innerScope = 20;
+
+            System.out.println("    - Outer scope value     : " + outerScope);
+            System.out.println("    - Inner scope value     : " + innerScope);
+
+            {
+                System.out.println("    [Innermost scope]");
+
+                // This variable is available only in this innermost scope.
+                int innermostScope = 100;
+
+                System.out.println("      - Outer scope value     : " + outerScope);
+                System.out.println("      - Inner scope value     : " + innerScope);
+                System.out.println("      - Innermost scope value : " + innermostScope);
+            }
+        }
     }
 }
