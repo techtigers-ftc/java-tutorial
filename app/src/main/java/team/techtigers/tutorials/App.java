@@ -24,6 +24,18 @@ public class App {
      * @param args Arguments passed to the entry point from the command line.
      */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int chosenNumber = 42;
+
+        // As you understand if-then-else statements, try changing the value of
+        // guess and see how the program behaves.
+        int guess = 13;
+
+        if (guess < chosenNumber) {
+            System.out.println("Your guess is too small");
+        } else if (guess > chosenNumber) { // Only evaluated if the first condition is false
+            System.out.println("Your guess is too large");
+        } else { // Only evaluated if the first and second conditions are false
+            System.out.println("You guessed the right number!");
+        }
     }
 }
