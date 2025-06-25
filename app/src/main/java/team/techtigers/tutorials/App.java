@@ -24,6 +24,20 @@ public class App {
      * @param args Arguments passed to the entry point from the command line.
      */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int index;
+
+        System.out.println("---\n");
+        System.out.println("for loop (0-9):");
+        for (index = 0; index < 10; index++) {
+            System.out.println("index = " + index);
+        }
+
+        System.out.println("---\n");
+        System.out.println("while loop (0-9):");
+        index = 0;
+        while (index < 10) {
+            System.out.println("index = " + index);
+            index++;
+        }
     }
 }
