@@ -53,5 +53,32 @@ public class App {
         System.out.println("Ninth score   : " + scoreList[8]);
         System.out.println("Tenth score   : " + scoreList[9]);
         System.out.println("---\n");
+
+        /* ---
+         * Exercises:
+         * ----------
+         * 1. Rewrite this code to use a for loop to add the scores to the
+         *    array, and to print the scores.
+         *
+         * 2. Consider the following code:
+         *    int [] numbers = new int[] {315, 821, 123, 456, 789, 234, 567, 890};
+         *    Calculate the sum of all the elements in the array
+         *
+         * 3. Consider the following code:
+         *    int [] numbers = new int[] {315, 821, 123, 456, 789, 234, 567, 890};
+         *    Count the number of elements in the array that are even numbers
+         *
+         * 4. Consider the code shown below
+         *    char[] steps = new char[] {'>', '>', '=', '<', '<', '=', '<', '>', '>', '<', '<', '<', '>', '>'};
+         *    int counter = 0;
+         *
+         *    Now consider the following rules:
+         *     - A step value of '>' increments the counter by 1
+         *     - A step value of '<' decrements the counter by 1
+         *     - A step value of '=' does not change the counter
+         *
+         *    Write a program that calculates the final value of the counter
+         *    when the items in the steps array are applied in order.
+         * --- */
     }
 }
