@@ -64,8 +64,7 @@ public class App {
 
         // First calculate the total sales
         double totalSales = 0.0;
-        for (int index = 0; index < salesRepresentatives.length; index++) {
-            SalesRepresentative representative = salesRepresentatives[index];
+        for (SalesRepresentative representative : salesRepresentatives) {
             totalSales = totalSales + representative.salesAmount;
         }
         System.out.printf("Total Sales = $ %,.2f%n", totalSales);
@@ -73,8 +72,7 @@ public class App {
 
         // Now calculate the bonus allocated to each sales rep by calling the
         // calculateBonus() function
-        for (int index = 0; index < salesRepresentatives.length; index++) {
-            SalesRepresentative representative = salesRepresentatives[index];
+        for (SalesRepresentative representative : salesRepresentatives) {
             representative.calculateBonus(totalSales);
             representative.showDetails();
         }
