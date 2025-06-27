@@ -29,10 +29,8 @@ public class App {
         long longVal = Long.MAX_VALUE;
         double doubleVal = 22.0 / 7.0;
         float floatVal = (float) 22 / 7;
-        boolean boolVal = false;
         char charVal = 'A';
         byte byteVal = 65;
-        String strVal = "Hello World!";
 
         System.out.println("---\n");
 
@@ -67,5 +65,26 @@ public class App {
         System.out.println("byte --> short   : " + (short) byteVal);
         System.out.println("byte --> char    : " + (char) byteVal);
         System.out.println("---\n");
+
+        /* ---
+         * Exercises:
+         * ----------
+         * 1. Can you typecast an integer value to a string to an integer?
+         *    Can you think of why this is or is not possible?
+         *
+         * 2. Why does the value of longVal change when you typecast it to a
+         *    short or int, but the value of shortVal does not change when
+         *    you typecast it to a long or int?
+         *
+         * 3. Can you typecast an int to a boolean?
+         *
+         * 4. A byte value of 65 is typecast to a char value of 'A'. What
+         *    character do you think a byte value of 66 would be typecast to?
+         *    What number would yield a char value of 'J'? Experiment with
+         *    typecasting byte values to char values to find out.
+         *
+         * 5. Explore typecasting between other data types, such as string and
+         *    int, string and double, etc.
+         * --- */
     }
 }
