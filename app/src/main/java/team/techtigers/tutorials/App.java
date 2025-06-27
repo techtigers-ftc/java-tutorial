@@ -46,7 +46,7 @@ public class App {
         // First calculate the total sales
         double totalSales = 0.0;
         for (SalesRepresentative representative : salesRepresentatives) {
-            totalSales = totalSales + representative.salesAmount;
+            totalSales = totalSales + representative.getSalesAmount();
         }
         System.out.printf("Total Sales = $ %,.2f%n", totalSales);
         System.out.println("---\n");

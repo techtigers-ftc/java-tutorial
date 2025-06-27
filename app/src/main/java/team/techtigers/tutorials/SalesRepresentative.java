@@ -4,10 +4,10 @@ package team.techtigers.tutorials;
  * Class representing a sales representative.
  */
 public class SalesRepresentative {
-    public String fullName;
-    public double salesAmount;
-    public double salary;
-    public double bonusPercentage;
+    private String fullName;
+    private double salesAmount;
+    private double salary;
+    private double bonusPercentage;
 
     /**
      * Creates a new SalesRepresentative instance.
@@ -31,6 +31,15 @@ public class SalesRepresentative {
         this.salesAmount = salesAmount;
         this.salary = salary;
         this.bonusPercentage = 0.0; // Initialize bonus percentage to zero
+    }
+
+    /**
+     * Gets the amount of sales made by the sales representative.
+     *
+     * @return The representative's sales amount in US dollars.
+     */
+    public double getSalesAmount() {
+        return salesAmount;
     }
 
     /**
