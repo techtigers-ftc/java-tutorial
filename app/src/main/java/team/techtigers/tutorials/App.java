@@ -89,4 +89,16 @@ public class App {
         }
         return percentage;
     }
+
+    /* ---
+     * Exercises:
+     * ----------
+     * 1. Write a function that simply prints the name of the sales
+     *    representative, sales amount, and the salary.
+     *
+     * 2. Write a function that takes the bonus percentage and the salary of the
+     *    sales representative and returns the bonus amount in US dollars.
+     *
+     *    Now update the program to update the salary of the representative.
+     * --- */
 }
