@@ -39,5 +39,34 @@ public class App {
             System.out.println("index = " + index);
             index++;
         }
+
+        /* ---
+         * Exercises:
+         * ----------
+         * 1. Write a for loop that prints only even numbers from 0 to 10. Can
+         *    you do this with a while loop as well?
+         *
+         * 2. Build a countdown program that counts down from 10 to 0
+         *
+         * 3. Write a program that prints the multiplication table for 5 from 1
+         *    to 20.
+         *
+         *    5 x 1 = 5
+         *    5 x 2 = 10
+         *    5 x 3 = 15
+         *    5 x 4 = 20
+         *    ...
+         *
+         * 4. Assume that there is a limit to the result of the multiplication
+         *    operation. Now rewrite the multiplication table program to stop
+         *    either after 20 iterations or when the result exceeds the limit
+         *    value.
+         *
+         *    Note: Do not pre calculate the iterations required to reach the
+         *    limit value. For example, if the limit is 50, the program should
+         *    not calculate that the limit will be reached at 10 iterations and
+         *    stop the loop at 10. Instead, it should start at 1 and stop when
+         *    the result exceeds the limit value.
+         * --- */
     }
 }
