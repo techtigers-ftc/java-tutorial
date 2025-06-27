@@ -111,5 +111,28 @@ public class App {
         c /= 2;
         System.out.println("c /= 2;                      c  = " + c);
         System.out.println("---\n");
+
+        /* ---
+         * Exercises:
+         * ----------
+         * 1. Can you use the add operator (+) between two different data
+         *    types? For example, can you add an int and a double? How about
+         *    a boolean and an int? Try it out and see what happens.
+         *
+         * 2. Can you compare two different data types? For example, can you
+         *    compare an int and a double? How about a boolean and an int?
+         *    Can you explain the results?
+         *
+         * 3. Can you use the modulus operator (%) with a double? What about
+         *    a boolean? Try it out and see what happens.
+         *
+         * 4. Consider the following code snippet:
+         *    double result = 10 / 3;
+         *    What do you think the value of `result` will be? Why?
+         *
+         * 5. Now try running the code snippet below:
+         *    int x = 10.0 / 2.0;
+         *    Does this work? Why or why not?
+         * --- */
     }
 }
