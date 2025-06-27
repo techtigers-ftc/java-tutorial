@@ -3,19 +3,16 @@ package team.techtigers.tutorials;
 /**
  * Class representing a sales representative.
  */
-public class SalesRepresentative {
-    private String fullName;
-    private double salesAmount;
-    private double salary;
+public class SalesRepresentative extends Employee {
+    private final double salesAmount;
     private double bonusPercentage;
 
     /**
      * Creates a new SalesRepresentative instance.
      */
     public SalesRepresentative() {
-        this.fullName = "";
+        super("", 0.0);
         this.salesAmount = 0.0;
-        this.salary = 0.0;
         this.bonusPercentage = 0.0;
     }
 
@@ -27,9 +24,8 @@ public class SalesRepresentative {
      * @param salesAmount The total sales amount in US dollars.
      */
     public SalesRepresentative(String fullName, double salary, double salesAmount) {
-        this.fullName = fullName;
+        super(fullName, salary); // Call the constructor of the Employee class
         this.salesAmount = salesAmount;
-        this.salary = salary;
         this.bonusPercentage = 0.0; // Initialize bonus percentage to zero
     }
 
@@ -64,11 +60,11 @@ public class SalesRepresentative {
      * Displays the details of the sales representative, including their name,
      * sales amount, and bonus percentage.
      */
+    @Override
     public void showDetails() {
+        super.showDetails(); // Call the showDetails method from Employee class
         System.out.printf(
-                "%-5s sold $ %,.2f, earning a bonus of %,.2f percent %n",
-                fullName,
-                salesAmount,
+                "\n\tBonus earned: %,.2f percent %n",
                 bonusPercentage
         );
     }
