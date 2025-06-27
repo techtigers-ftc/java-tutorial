@@ -51,5 +51,15 @@ public class App {
                 System.out.println("      - Innermost scope value : " + innermostScope);
             }
         }
+
+        /* ---
+         * Exercises:
+         * ----------
+         * 1. Try to print the value of the innermostScope variable in the outer
+         *    scope (after the innermost scope block). What happens? Why?
+         *
+         * 2. Can you redeclare a variable in an inner scope that has the same
+         *    name as a variable in an outer scope? If so, what happens?
+         * --- */
     }
 }
