@@ -35,31 +35,11 @@ public class App {
 
         SalesRepresentative[] salesRepresentatives = new SalesRepresentative[5];
 
-        salesRepresentatives[0] = new SalesRepresentative();
-        salesRepresentatives[0].fullName = "John";
-        salesRepresentatives[0].salary = 65375;
-        salesRepresentatives[0].salesAmount = 201892.25;
-
-        salesRepresentatives[1] = new SalesRepresentative();
-        salesRepresentatives[1].fullName = "Shawn";
-        salesRepresentatives[1].salary = 71234;
-        salesRepresentatives[1].salesAmount = 512501.97;
-
-        salesRepresentatives[2] = new SalesRepresentative();
-        salesRepresentatives[2].fullName = "David";
-        salesRepresentatives[2].salary = 65192;
-        salesRepresentatives[2].salesAmount = 262942.78;
-
-        salesRepresentatives[3] = new SalesRepresentative();
-        salesRepresentatives[3].fullName = "Jerry";
-        salesRepresentatives[3].salary = 69521;
-        salesRepresentatives[3].salesAmount = 198767.23;
-
-        salesRepresentatives[4] = new SalesRepresentative();
-        salesRepresentatives[4].fullName = "Phil";
-        salesRepresentatives[4].salary = 62153;
-        salesRepresentatives[4].salesAmount = 243153.82;
-
+        salesRepresentatives[0] = new SalesRepresentative("John", 65375, 201892.25);
+        salesRepresentatives[1] = new SalesRepresentative("Shawn", 71234, 512501.97);
+        salesRepresentatives[2] = new SalesRepresentative("David", 65192, 262942.78);
+        salesRepresentatives[3] = new SalesRepresentative("Jerry", 69521, 198767.23);
+        salesRepresentatives[4] = new SalesRepresentative("Phil", 62153, 243153.82);
         System.out.println("---\n");
 
         // First calculate the total sales

@@ -20,6 +20,20 @@ public class SalesRepresentative {
     }
 
     /**
+     * Creates a new SalesRepresentative instance with specified details.
+     *
+     * @param fullName    The full name of the sales representative.
+     * @param salary      The base salary of the sales representative in US dollars.
+     * @param salesAmount The total sales amount in US dollars.
+     */
+    public SalesRepresentative(String fullName, double salary, double salesAmount) {
+        this.fullName = fullName;
+        this.salesAmount = salesAmount;
+        this.salary = salary;
+        this.bonusPercentage = 0.0; // Initialize bonus percentage to zero
+    }
+
+    /**
      * Calculates the bonus percentage based on the total sales amount.
      *
      * @param totalSales The total sales amount in US dollars.
@@ -43,10 +57,10 @@ public class SalesRepresentative {
      */
     public void showDetails() {
         System.out.printf(
-            "%-5s sold $ %,.2f, earning a bonus of %,.2f percent %n",
-            fullName,
-            salesAmount,
-            bonusPercentage
+                "%-5s sold $ %,.2f, earning a bonus of %,.2f percent %n",
+                fullName,
+                salesAmount,
+                bonusPercentage
         );
     }
 }
