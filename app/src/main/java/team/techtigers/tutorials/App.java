@@ -37,5 +37,31 @@ public class App {
         } else { // Only evaluated if the first and second conditions are false
             System.out.println("You guessed the right number!");
         }
+
+        /* ---
+         * Exercises:
+         * ----------
+         * 1. Add a condition to the if-then-else statement that will warn the
+         *    user if the guessed value is negative?
+         *
+         * 2. Update the program to give the user a hint if the guessed value
+         *    is within 5 of the chosen number, while still keeping the messages
+         *    that tell the user if their guess is too small or too large.
+         *    Can you do this without duplicating print statements?
+         *
+         * 3. Change the program number to allow 2 correct answers. If the users
+         *    guesses any of the numbers, they should be told that they guessed
+         *    the right number. If they guess a number that does not match any of
+         *    the numbers, they should be told that their guess is too small or
+         *    too large compared to the closest number.
+         *    For example:
+         *    Assume that the chosen numbers are 42 and 50.
+         *    If  the user guesses 45, they should be told that their guess is
+         *    too large. This is because the closest correct number is 42, and
+         *    the user's guess is greater than this value.
+         *    If the user guesses 49, they should be told that their guess is
+         *    too small. This is because the closest correct number is 50, and
+         *    the user's guess is less than this value.
+         * --- */
     }
 }
