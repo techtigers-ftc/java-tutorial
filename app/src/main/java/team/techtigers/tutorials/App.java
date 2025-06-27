@@ -33,39 +33,55 @@ public class App {
         // each sales representative based on their contributions. Bonuses are
         // calculated as the percentage of total sales brought in, capped at 20%.
 
-        String[] salesRepNames = new String[]{
-                "John", "Shawn", "David", "Jerry", "Phil"
-        };
-        double[] salaries = new double[]{
-                65375, 71234, 65192, 69521, 62153
-        };
-        double[] salesAmounts = new double[]{
-                201892.25, 512501.97, 262942.78, 198767.23, 243153.82
-        };
-        double[] bonusPercentage = new double[salesAmounts.length];
+        SalesRepresentative[] salesRepresentatives = new SalesRepresentative[5];
+
+        salesRepresentatives[0] = new SalesRepresentative();
+        salesRepresentatives[0].fullName = "John";
+        salesRepresentatives[0].salary = 65375;
+        salesRepresentatives[0].salesAmount = 201892.25;
+
+        salesRepresentatives[1] = new SalesRepresentative();
+        salesRepresentatives[1].fullName = "Shawn";
+        salesRepresentatives[1].salary = 71234;
+        salesRepresentatives[1].salesAmount = 512501.97;
+
+        salesRepresentatives[2] = new SalesRepresentative();
+        salesRepresentatives[2].fullName = "David";
+        salesRepresentatives[2].salary = 65192;
+        salesRepresentatives[2].salesAmount = 262942.78;
+
+        salesRepresentatives[3] = new SalesRepresentative();
+        salesRepresentatives[3].fullName = "Jerry";
+        salesRepresentatives[3].salary = 69521;
+        salesRepresentatives[3].salesAmount = 198767.23;
+
+        salesRepresentatives[4] = new SalesRepresentative();
+        salesRepresentatives[4].fullName = "Phil";
+        salesRepresentatives[4].salary = 62153;
+        salesRepresentatives[4].salesAmount = 243153.82;
 
         System.out.println("---\n");
 
         // First calculate the total sales
         double totalSales = 0.0;
-        for (int index = 0; index < salesAmounts.length; index++) {
-            totalSales = totalSales + salesAmounts[index];
+        for (int index = 0; index < salesRepresentatives.length; index++) {
+            SalesRepresentative representative = salesRepresentatives[index];
+            totalSales = totalSales + representative.salesAmount;
         }
         System.out.printf("Total Sales = $ %,.2f%n", totalSales);
         System.out.println("---\n");
 
         // Now calculate the bonus allocated to each sales rep by calling the
         // calculateBonus() function
-        for (int index = 0; index < salesAmounts.length; index++) {
-            String name = salesRepNames[index];
-            double salesAmount = salesAmounts[index];
+        for (int index = 0; index < salesRepresentatives.length; index++) {
+            SalesRepresentative representative = salesRepresentatives[index];
 
             // Call function to calculate bonus
-            double bonus = calculateBonus(salesAmount, totalSales);
+            double bonus = calculateBonus(representative.salesAmount, totalSales);
 
             System.out.printf(
                     "%-5s sold $ %,.2f, earning a bonus of %,.2f percent %n",
-                    name, salesAmount, bonus);
+                    representative.fullName, representative.salesAmount, bonus);
         }
         System.out.println("---\n");
     }
@@ -89,16 +105,4 @@ public class App {
         }
         return percentage;
     }
-
-    /* ---
-     * Exercises:
-     * ----------
-     * 1. Write a function that simply prints the name of the sales
-     *    representative, sales amount, and the salary.
-     *
-     * 2. Write a function that takes the bonus percentage and the salary of the
-     *    sales representative and returns the bonus amount in US dollars.
-     *
-     *    Now update the program to update the salary of the representative.
-     * --- */
 }
