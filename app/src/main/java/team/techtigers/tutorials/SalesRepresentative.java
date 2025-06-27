@@ -18,4 +18,22 @@ public class SalesRepresentative {
         this.salary = 0.0;
         this.bonusPercentage = 0.0;
     }
+
+    /**
+     * Calculates the bonus percentage based on the total sales amount.
+     *
+     * @param totalSales The total sales amount in US dollars.
+     */
+    public void calculateBonus(double totalSales) {
+        if (totalSales == 0) {
+            bonusPercentage = 0.0; // If total sales is zero, no bonus
+            return;
+        }
+
+        // Calculate the bonus percentage based on sales amount
+        bonusPercentage = (this.salesAmount / totalSales) * 100;
+        if (bonusPercentage > 20) {
+            bonusPercentage = 20; // Cap at 20%
+        }
+    }
 }

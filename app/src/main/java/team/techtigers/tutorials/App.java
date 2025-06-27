@@ -75,34 +75,14 @@ public class App {
         // calculateBonus() function
         for (int index = 0; index < salesRepresentatives.length; index++) {
             SalesRepresentative representative = salesRepresentatives[index];
-
-            // Call function to calculate bonus
-            double bonus = calculateBonus(representative.salesAmount, totalSales);
+            representative.calculateBonus(totalSales);
 
             System.out.printf(
                     "%-5s sold $ %,.2f, earning a bonus of %,.2f percent %n",
-                    representative.fullName, representative.salesAmount, bonus);
+                    representative.fullName,
+                    representative.salesAmount,
+                    representative.bonusPercentage);
         }
         System.out.println("---\n");
-    }
-
-    /**
-     * Calculates the bonus allocated to a sales representative based on their
-     * individual and department sales. Bonus percentages are capped at 20% and
-     * If the total sales is 0, then the bonus percentage is also 0.
-     *
-     * @param individualSales Sales contributed by the individual in US dollars.
-     * @param totalSales      Total sales in US dollars
-     * @return The bonus percentage earned by the individual
-     */
-    private static double calculateBonus(double individualSales, double totalSales) {
-        if (totalSales == 0) {
-            return 0.0;
-        }
-        double percentage = (individualSales / totalSales) * 100;
-        if (percentage > 20.0) {
-            percentage = 20.0;
-        }
-        return percentage;
     }
 }
