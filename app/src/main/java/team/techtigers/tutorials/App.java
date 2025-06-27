@@ -33,13 +33,14 @@ public class App {
         // each sales representative based on their contributions. Bonuses are
         // calculated as the percentage of total sales brought in, capped at 20%.
 
-        SalesRepresentative[] salesRepresentatives = new SalesRepresentative[5];
+        SalesRepresentative[] salesRepresentatives = new SalesRepresentative[]{
+                new SalesRepresentative("John", 65375, 201892.25),
+                new SalesRepresentative("Shawn", 71234, 512501.97),
+                new SalesRepresentative("David", 65192, 262942.78),
+                new SalesRepresentative("Jerry", 69521, 198767.23),
+                new SalesRepresentative("Phil", 62153, 243153.82)
+        };
 
-        salesRepresentatives[0] = new SalesRepresentative("John", 65375, 201892.25);
-        salesRepresentatives[1] = new SalesRepresentative("Shawn", 71234, 512501.97);
-        salesRepresentatives[2] = new SalesRepresentative("David", 65192, 262942.78);
-        salesRepresentatives[3] = new SalesRepresentative("Jerry", 69521, 198767.23);
-        salesRepresentatives[4] = new SalesRepresentative("Phil", 62153, 243153.82);
         System.out.println("---\n");
 
         // First calculate the total sales
