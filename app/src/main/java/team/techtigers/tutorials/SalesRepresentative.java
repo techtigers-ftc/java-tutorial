@@ -36,4 +36,17 @@ public class SalesRepresentative {
             bonusPercentage = 20; // Cap at 20%
         }
     }
+
+    /**
+     * Displays the details of the sales representative, including their name,
+     * sales amount, and bonus percentage.
+     */
+    public void showDetails() {
+        System.out.printf(
+            "%-5s sold $ %,.2f, earning a bonus of %,.2f percent %n",
+            fullName,
+            salesAmount,
+            bonusPercentage
+        );
+    }
 }

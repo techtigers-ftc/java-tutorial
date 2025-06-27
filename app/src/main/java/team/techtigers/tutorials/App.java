@@ -76,12 +76,7 @@ public class App {
         for (int index = 0; index < salesRepresentatives.length; index++) {
             SalesRepresentative representative = salesRepresentatives[index];
             representative.calculateBonus(totalSales);
-
-            System.out.printf(
-                    "%-5s sold $ %,.2f, earning a bonus of %,.2f percent %n",
-                    representative.fullName,
-                    representative.salesAmount,
-                    representative.bonusPercentage);
+            representative.showDetails();
         }
         System.out.println("---\n");
     }
